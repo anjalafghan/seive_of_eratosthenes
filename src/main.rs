@@ -4,7 +4,13 @@ use std::io;
 
 fn main() {
     let input = get_valid_input();
-    let input_vector: Vec<i32> = (2..=input).collect();
+    let mut input_vector: Vec<i32> = (2..=input).collect();
+    input_vector.retain(|&x| x % 2 != 0 || x == 2);
+    input_vector.retain(|&x| x % 3 != 0 || x == 3);
+    input_vector.retain(|&x| x % 5 != 0 || x == 5);
+    input_vector.retain(|&x| x % 7 != 0 || x == 7);
+    println!("The list of all prime numbers are {:?}" , input_vector)
+
 
 }
 
