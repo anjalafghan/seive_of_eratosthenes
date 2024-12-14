@@ -3,9 +3,9 @@ use seive_of_eratosthenes::{find_primes_dumb, find_primes_smart};
 fn main() {
     let input = get_valid_input();
     let mut input_vector: Vec<i32> = (2..=input).collect();
-    find_primes_dumb(&mut input_vector);
+    find_primes_dumb(&mut input_vector, &Default::default());
     println!("Dumb primes: {:?}", input_vector);
-    find_primes_smart(&mut input_vector);
+    find_primes_smart(&mut input_vector, &Default::default());
     println!("Smart primes: {:?}", input_vector);
 }
 
